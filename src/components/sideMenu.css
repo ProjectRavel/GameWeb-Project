@@ -1,0 +1,84 @@
+.sideMenu{
+    width: 20%;
+    height: 100%;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0px 30px 30px 0px;
+    background: var(--secondary);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    transition: 1s;    
+}
+
+.sideMenu .logo {
+    font-family: 'arial';
+    position: relative;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-size: 3.5em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.sideMenu .nav {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 15px;
+}
+
+.sideMenu .nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    transition: 0.5s;
+    background: var(--secondary);
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.sideMenu .nav li a:hover {
+    opacity: 60%;
+}
+
+.sideMenu .social {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    transition: 0.5s    ;
+}
+
+.sideMenu .social li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.sideMenu .social li a:hover {
+    opacity: 45%;
+}
+
+.sideMenu .social li a .bi-share{
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary);
+    border-radius: 100%;
+}
