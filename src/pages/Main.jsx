@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./main.css";
 import SideMenu from "../components/sidemenu.jsx";
 import Header from "./Header.jsx";
@@ -9,11 +9,13 @@ function Main() {
   const handleToggleActive = () => {
     setActive(!active);
   };
+
+
   return (
     <main>
-      <SideMenu />
-      <div className="banner">
-        <Header></Header>
+      <SideMenu active={active} />
+      <div className={`banner ${active ? "active" : undefined}`}>
+        <Header toggleActive={handleToggleActive}></Header>
       </div>
     </main>
   );
