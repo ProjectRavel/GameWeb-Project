@@ -21,3 +21,9 @@ main {
     background: var(--bgColor);
     transition: 1s;    
 }
+
+.banner.active {
+    position: relative;
+    width: 93%;
+    transition: 1s;
+}

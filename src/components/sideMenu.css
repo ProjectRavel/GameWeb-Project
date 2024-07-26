@@ -42,11 +42,10 @@
     display: inline-flex;
     align-items: center;
     gap: 25px;
-    transition: 0.5s;
     border-radius: 20px;
     padding: 10px 20px;
     width: 100%;
-    transition: 0.5s;
+    transition: 1.2s;
 }
 
 .sideMenu .nav li a:hover {
