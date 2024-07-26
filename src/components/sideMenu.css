@@ -43,7 +43,6 @@
     align-items: center;
     gap: 25px;
     transition: 0.5s;
-    background: var(--secondary);
     border-radius: 20px;
     padding: 10px 20px;
     width: 100%;
@@ -101,4 +100,27 @@
 
 .userItems .avatar .user a:hover {
     text-decoration: underline;
+}
+
+.sideMenu.active {
+    width: 7%;
+    transition: 1s;
+    overflow: hidden;
+    align-items: center;
+}
+
+.sideMenu.active .brand,
+.sideMenu.active .navName {
+    display: none;
+}
+
+.sideMenu.active .nav li a {
+    font-size: 1.8em;
+}
+
+.sideMenu.active .social{
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
