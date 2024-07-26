@@ -5,9 +5,10 @@
 }
 
 :root {
-    --primary: #7a5af5;
-    --secondary: #3f3f3f;
-    --bgColor: #121212;
+    --primary: #a688fa;
+    --secondary: #46424f;
+    --bgColor: #1a1625;
+    --white: #ffffff;
 }
 
 h1, h2, h3, h4, p {

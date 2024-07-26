@@ -82,3 +82,23 @@
     background-color: var(--primary);
     border-radius: 100%;
 }
+
+.userItems .avatar .user {
+    display: flex;
+    flex-direction: column;
+}
+
+.userItems .avatar .user span {
+    color: var(--white);
+    font-size: 0.7rem;
+}
+
+.userItems .avatar .user a {
+    text-decoration: none ;
+    font-size: 0.6rem;
+    color: var(--white);
+}
+
+.userItems .avatar .user a:hover {
+    text-decoration: underline;
+}
