@@ -1,0 +1,144 @@
+
+.swiper {
+    width: 90%;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+}
+
+
+.swiper-slide {
+    width: 550px;
+    height: 350px;
+    border-radius: 20px; 
+    overflow: hidden;
+}
+
+.gameSlider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 20px; 
+    overflow: hidden;
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out; 
+}
+
+.gameSlider:hover {
+    transform: scale(1.03); 
+}
+
+
+.gameSlider::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px; 
+    transition: opacity 0.3s ease-in-out; 
+}
+
+/* Swiper Slide Image */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Content inside gameSlider */
+.gameSlider .content {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1000;
+    width: 100%; /* Adjust to full width */
+    padding: 0 20px;/* Adjust padding for spacing */
+    color: #fff;
+}
+
+/* Title styling */
+.gameSlider .content h2 {
+    font-size: 2rem; /* Adjust font size for readability */
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Add text shadow for contrast */
+}
+
+/* Description styling */
+.gameSlider .content p {
+    color: #ebebeb;
+    font-size: 0.9rem; /* Slightly larger font size */
+    margin-bottom: 15px;
+    line-height: 1.4; /* Adjust line height for readability */
+}
+
+/* Buttons */
+.gameSlider .content .buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gameSlider .content .buttons a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px 15px; /* Adjust padding for better button sizing */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.gameSlider .content .buttons .orderBtn {
+    background: var(--primary);
+}
+
+.gameSlider .content .buttons .orderBtn:hover {
+    background: darken(var(--primary), 10%); /* Darken on hover */
+}
+
+.gameSlider .content .buttons .playBtn {
+    height: 50px;
+    width: 50px;
+    backdrop-filter: blur(20px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    border: 2px solid #fff; /* Add border for contrast */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.playBtn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten background on hover */
+}
+
+/* Video Styling */
+.swiper-slide .video iframe {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%; /* Full width for better visibility */
+    height: 60%; /* Adjust height */
+    border-radius: 0 20px 0 20px; /* Match border radius */
+    border: none; /* Remove border for clean look */
+    background: var(--secondary);
+    z-index: 1100;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.swiper-slide.swiper-slide-active .video.active iframe {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}

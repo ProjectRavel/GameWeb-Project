@@ -1,0 +1,112 @@
+.gameCard{
+    position: relative;
+    padding: 25px 20px;
+    margin-bottom: 25px;
+    width: auto;
+    height: 400px;
+    border-radius: 20px;
+    background: var(--dark);
+    
+}
+
+.gameCard img {
+    border-radius: 20px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    object-position: center;
+    height: 50%;
+    width: 100%;
+}
+
+.gameCard .like {
+    position: absolute;
+    top: 24px;
+    right: 19px;
+    width: 40px;
+    height: 40px;
+    background: var(--secondary);
+    padding: 5px;
+    border-radius: 0 0 0 20px;
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.gameCard .like.active { 
+    background: var(--primary);
+}
+
+.gameCard span {
+    color: #ffff;
+}
+
+.gameCard .gameFeature {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gameCard .gameType {
+    background: var(--primary);
+    padding: 5px 19px;
+    border-radius: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.gameCard .gameTitle {
+    margin-top: 10px;
+    color: #ffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.gameCard .gamePrice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gameCard .discount {
+    background: #f10000;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.gameCard .prevPrice {
+    text-decoration: line-through;
+    text-decoration-color: #ff0000;
+    text-decoration-thickness: 3px;
+    font-size: 0.8rem;
+}
+
+.gameCard .currentPrice {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.gameCard .addBag {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #ffff;
+    background: var(--secondary);
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0 20px 0;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.gameCard .addBag:hover {
+    background: var(--primary);
+}

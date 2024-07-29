@@ -27,3 +27,124 @@ main {
     width: 93%;
     transition: 1s;
 }
+
+section {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    padding: 0 30px 0 30px;
+    opacity: 40;
+    transition: ease-in-out 1s;
+    transform-origin: bottom;
+}
+
+section::-webkit-scrollbar{
+    display: none;
+}
+
+section.active {
+    top: 100px;
+    height: auto;
+    overflow-y: visible;
+    opacity: 0;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    bottom: 0 !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    font-size: 1.5rem;
+    color: #ffff;
+}
+
+.gameSlider .content {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1000;
+    width: 60%;
+}
+
+.gameSlider .content h2{
+    font-size: 3.5rem;
+}
+
+.gameSlider .content p {
+    color: #ebebeb;
+    font-size: 0.8rem;
+}
+
+.gameSlider .content .buttons {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gameSlider .content .buttons a {
+    text-decoration: none;
+    color: #ffff;
+    text-transform: uppercase;
+}
+
+.gameSlider .content .buttons .orderBtn {
+    padding: 8px 20px;
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.gameSlider .content .buttons .playBtn{
+    height: 50px;
+    width: 50px;
+    backdrop-filter: blur(20px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.playBtn .play {
+    display: block;
+}
+
+.playBtn .pause {
+    display: none;
+}
+
+.swiper-slide.swiper-slide-active .playBtn.active .play {
+    display: none;
+}
+
+.swiper-slide.swiper-slide-active .playBtn.active .pause {
+    display: block;
+}
+
+.swiper-slide .video iframe {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 85%;
+    height: 75%;
+    border-radius: 0 30px 0 30px !important;
+    border: 5px solid transparent;
+    background: var(--secondary);
+    z-index: 1100;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.5s;
+    transform-origin: top right;
+}
+
+.swiper-slide.swiper-slide-active .video.active iframe {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
