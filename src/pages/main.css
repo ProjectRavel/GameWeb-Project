@@ -148,3 +148,10 @@ section.active {
     opacity: 1;
     transform: scale(1);
 }
+
+section.active {
+    top: 100px;
+    height: auto;
+    overflow-y: visible;
+    opacity: 1;
+}

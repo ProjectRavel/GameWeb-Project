@@ -126,7 +126,7 @@
     right: 0;
     top: 0;
     width: 100%; /* Full width for better visibility */
-    height: 60%; /* Adjust height */
+    height: 80%; /* Adjust height */
     border-radius: 0 20px 0 20px; /* Match border radius */
     border: none; /* Remove border for clean look */
     background: var(--secondary);

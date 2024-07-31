@@ -1,100 +1,104 @@
-.sideMenu{
+.sideMenu {
     width: 20%;
     height: 100%;
-    padding: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0px 30px 30px 0px;
+    padding: 20px;
+    border: none;
+    border-radius: 0 20px 20px 0;
     background: var(--secondary);
-    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    transition: 1s;    
+    transition: width 0.3s, box-shadow 0.3s;
+    overflow: hidden;
 }
 
 .sideMenu .logo {
-    font-family: 'arial';
-    position: relative;
+    font-family: 'Arial', sans-serif;
     text-decoration: none;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     color: white;
-    font-size: 3.5em;
+    font-size: 2.5em;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .sideMenu .nav {
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     list-style: none;
     gap: 15px;
+    flex: 1; /* Menggunakan flex untuk mengisi ruang yang tersedia */
+}
+
+.sideMenu .nav li {
+    margin: 10px 0; /* Menambah jarak vertikal antar item */
 }
 
 .sideMenu .nav li a {
     text-decoration: none;
     color: white;
-    font-size: 1.2em;
-    letter-spacing: 1px;
-    display: inline-flex;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    display: flex;
     align-items: center;
-    gap: 25px;
-    border-radius: 20px;
-    padding: 10px 20px;
+    gap: 15px;
+    border-radius: 15px;
+    padding: 10px 15px;
     width: 100%;
-    transition: 1.2s;
+    transition: background 0.3s, color 0.3s;
 }
 
-.sideMenu .nav li a:hover {
-    opacity: 60%;
+.sideMenu .nav li a:hover,
+.sideMenu .nav li a.active {
+    background: var(--primary);
+    color: #fff;
 }
 
 .sideMenu .social {
-    position: absolute;
-    bottom: 50px;
+    margin-top: auto; /* Menempatkan elemen sosial di bagian bawah */
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 20px;
-    transition: 0.5s    ;
+    gap: 15px;
 }
 
 .sideMenu .social li a {
     text-decoration: none;
     color: white;
-    font-size: 1.5rem;
-    transition: 0.3s;
+    font-size: 1.2rem;
+    transition: color 0.3s;
 }
 
 .sideMenu .social li a:hover {
-    opacity: 45%;
+    color: var(--primary);
 }
 
-.sideMenu .social li a .bi-share{
-    padding: 10px;
-    width: 35px;
-    height: 35px;
+.sideMenu .social li a .bi-share {
+    padding: 8px;
+    width: 30px;
+    height: 30px;
     background-color: var(--primary);
-    border-radius: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .userItems .avatar .user {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
-.userItems .avatar .user span {
-    color: var(--white);
-    font-size: 0.7rem;
-}
-
+.userItems .avatar .user span,
 .userItems .avatar .user a {
-    text-decoration: none ;
-    font-size: 0.6rem;
-    color: var(--white);
+    color: #fff;
+    font-size: 0.8rem;
+    transition: color 0.3s;
 }
 
 .userItems .avatar .user a:hover {
@@ -103,23 +107,20 @@
 
 .sideMenu.active {
     width: 7%;
-    transition: 1s;
-    overflow: hidden;
+    transition: width 0.3s;
     align-items: center;
 }
 
-.sideMenu.active .brand,
-.sideMenu.active .navName {
+.sideMenu.active .logo {
+    font-size: 1.5em;
+    gap: 0;
+}
+
+.sideMenu.active .nav {
     display: none;
 }
 
-.sideMenu.active .nav li a {
-    font-size: 1.8em;
-}
-
-.sideMenu.active .social{
-    padding: 0;
+.sideMenu.active .social {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 10px;
 }
