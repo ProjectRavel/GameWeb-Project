@@ -1,3 +1,22 @@
+/* Kustomisasi scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark); /* Warna latar belakang track scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary); /* Warna thumb scrollbar */
+    border-radius: 6px; /* Radius sudut thumb scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--white); /* Warna thumb saat hover */
+}
+
+
 * {
     margin: 0;
     padding: 0;
