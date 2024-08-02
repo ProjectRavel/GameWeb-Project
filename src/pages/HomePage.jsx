@@ -5,7 +5,7 @@ import GameCard from '../components/GameCard'
 
 export default function Home({ games, reference }) {
   return (
-    <section id='home' className='home' ref={reference}>
+    <section id='home' className='home active' ref={reference}>
       <div className='container-fluid'>
           <div className='row'>
             <GameSwiper games={games}></GameSwiper>

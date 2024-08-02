@@ -13,7 +13,6 @@ export default function GameCard({ game }) {
       </a>
       <div className="gameFeature">
         <span className="gameType">{game.level}</span>
-        <GameRating rating={game.rating}></GameRating>
       </div>
       <div className="gameTitle mt-4 mb-3">{game.title}</div>
       <div className="gamePrice">
