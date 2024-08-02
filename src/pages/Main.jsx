@@ -45,9 +45,13 @@ function Main() {
 
   const handleSectionAction = target => {
     sections.map(section => {
-      console.log(
-        section.ref.current
-      )
+      section.ref.current.classList.remove('active')
+      if(section.ref.current.id === target){
+        section.ref.current.classList.add('active')
+        console.log(section.ref.current.id)
+        // call API to filter games by category and update state accordingly
+        // fetchDataByCategory(section.name
+      }
     })
   }
 

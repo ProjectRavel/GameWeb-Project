@@ -1,3 +1,16 @@
+/* Animasi scrollUp */
+@keyframes scrollUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Style untuk main */
 main {
     position: absolute;
     top: 0;
@@ -9,46 +22,54 @@ main {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    overflow: hidden;
-    transition: 0.3s;
+    overflow: auto; /* Ubah dari hidden ke auto */
+    transition: background-color 0.3s ease;
+    
 }
 
-.banner{
+/* Style untuk banner */
+.banner {
     position: relative;
     width: 80%;
     height: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background: var(--bgColor);
-    transition: 1s;    
+    transition: width 1s ease;
+    overflow-x: hidden; /* Hanya sembunyikan scroll horizontal */
+    overflow-y: auto; /* Atur scroll vertikal jika diperlukan */
 }
 
 .banner.active {
-    position: relative;
     width: 93%;
-    transition: 1s;
 }
 
+/* Style untuk section */
 section {
-    overflow: hidden;
+    overflow: auto; /* Ubah dari hidden ke auto */
     position: absolute;
     width: 100%;
-    padding: 0 30px 0 30px;
-    opacity: 40;
-    transition: ease-in-out 1s;
-    transform-origin: bottom;
+    padding: 0 30px;
+    opacity: 0;
+    height: 0;
+    transform: translateY(20px); /* Initial position for animation */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
 }
 
-section::-webkit-scrollbar{
-    display: none;
-}
-
+/* Section active state */
 section.active {
     top: 100px;
     height: auto;
     overflow-y: visible;
-    opacity: 0;
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+    animation: scrollUp 0.5s ease-out; /* Apply scrollUp animation */
 }
 
+section::-webkit-scrollbar {
+    display: none;
+}
+
+/* Swiper button styles */
 .swiper-button-prev,
 .swiper-button-next {
     position: absolute;
@@ -60,11 +81,12 @@ section.active {
 }
 
 .swiper-button-prev::after,
-.swiper-button-next::after{
+.swiper-button-next::after {
     font-size: 1.5rem;
     color: #ffff;
 }
 
+/* GameSlider content styles */
 .gameSlider .content {
     position: absolute;
     bottom: 20px;
@@ -72,7 +94,7 @@ section.active {
     width: 60%;
 }
 
-.gameSlider .content h2{
+.gameSlider .content h2 {
     font-size: 3.5rem;
 }
 
@@ -99,7 +121,7 @@ section.active {
     border-radius: 10px;
 }
 
-.gameSlider .content .buttons .playBtn{
+.gameSlider .content .buttons .playBtn {
     height: 50px;
     width: 50px;
     backdrop-filter: blur(20px);
@@ -147,11 +169,4 @@ section.active {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
-}
-
-section.active {
-    top: 100px;
-    height: auto;
-    overflow-y: visible;
-    opacity: 1;
 }
