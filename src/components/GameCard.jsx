@@ -1,14 +1,21 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./gamecard.css";
 import GameRating from "./GameRating";
+import { AppContext } from "../App";
 
 export default function GameCard({ game }) {
+
+  const  {library, setLibrary, bag, setBag} = useContext(AppContext)
+  const handleAddToLibrary = game => {
+    setLibrary([...library, game])
+  }
+
   const currentPrice = (1 - game.discount) * game.price
   return (
     <div className="col-xl-3 col-lg-4 col-md-6 mt-4">
       <div className="gameCard">
       <img src={game.img} alt={game.title} className="img-fluid" />
-      <a href="#" className="like">
+      <a href="#" className="like" onClick={() => handleAddToLibrary(game)}>
         <i className="bi bi-heart-fill"></i>
       </a>
       <div className="gameFeature">

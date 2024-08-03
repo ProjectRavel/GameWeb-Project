@@ -1,13 +1,15 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
+import { AppContext } from "../App.jsx";
 import "./main.css";
 import SideMenu from "../components/sidemenu.jsx";
 import Header from "./Header.jsx";
 import Home from "./HomePage.jsx";
 import Categories from "./Categories.jsx";
-import MyLibrary from "./MyLibrary.jsx";  
+import MyLibrary from "./MyLibrary.jsx";
 import Bag from "./Bag.jsx";
 
 function Main() {
+  const { library, bag } = useContext(AppContext);
   const [active, setActive] = useState(false);
   const [games, setGames] = useState([]);
 
@@ -36,24 +38,24 @@ function Main() {
       name: "Bag",
       ref: bagRef,
       active: false,
-    }
-  ]
+    },
+  ];
 
   const handleToggleActive = () => {
     setActive(!active);
   };
 
-  const handleSectionAction = target => {
-    sections.map(section => {
-      section.ref.current.classList.remove('active')
-      if(section.ref.current.id === target){
-        section.ref.current.classList.add('active')
-        console.log(section.ref.current.id)
+  const handleSectionAction = (target) => {
+    sections.map((section) => {
+      section.ref.current.classList.remove("active");
+      if (section.ref.current.id === target) {
+        section.ref.current.classList.add("active");
+        console.log(section.ref.current.id);
         // call API to filter games by category and update state accordingly
         // fetchDataByCategory(section.name
       }
-    })
-  }
+    });
+  };
 
   const fetchData = () => {
     fetch("../API/gameData.json")
@@ -74,8 +76,8 @@ function Main() {
         <div className="container-fluid">
           <Home games={games} reference={homeRef}></Home>
           <Categories games={games} reference={categoriesRef}></Categories>
-          <MyLibrary games={games} reference={libraryRef}></MyLibrary>
-          <Bag games={games} reference={bagRef}></Bag>
+          <MyLibrary games={library} reference={libraryRef}></MyLibrary>
+          <Bag games={bag} reference={bagRef}></Bag>
         </div>
       </div>
     </main>
