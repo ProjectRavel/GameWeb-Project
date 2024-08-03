@@ -4,8 +4,10 @@
 
 .filters-and-search {
     display: flex;
-    justify-content: space-between; /* Mengatur jarak antara filters dan search */
-    align-items: center; /* Menyelaraskan vertikal */
+    justify-content: space-between;
+    /* Mengatur jarak antara filters dan search */
+    align-items: center;
+    /* Menyelaraskan vertikal */
 }
 
 .filters {
@@ -18,7 +20,8 @@
 }
 
 .filters li {
-    color: #ffffff; /* Menggunakan warna putih untuk teks */
+    color: #ffffff;
+    /* Menggunakan warna putih untuk teks */
     padding: 10px 25px;
     transition: 0.3s;
     border-radius: 10px;
@@ -28,23 +31,31 @@
 
 .filters li:hover,
 .filters li.active {
-    background-color: var(--primary); /* Mengganti background saat hover atau aktif */
+    background-color: var(--primary);
+    /* Mengganti background saat hover atau aktif */
 }
 
 .search {
     display: flex;
     align-items: center;
     gap: 15px;
-    width: 300px; /* Atur lebar search bar sesuai kebutuhan */
-    height: 50px; /* Tinggi search bar untuk menyesuaikan ukuran */
-    background: var(--secondary); /* Background putih agar terlihat jelas */
-    border-radius: 10px; /* Membuat sudut search bar bulat */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek depth */
-    padding: 0 10px; /* Padding horizontal */
+    width: 300px;
+    /* Atur lebar search bar sesuai kebutuhan */
+    height: 50px;
+    /* Tinggi search bar untuk menyesuaikan ukuran */
+    background: var(--secondary);
+    /* Background putih agar terlihat jelas */
+    border-radius: 10px;
+    /* Membuat sudut search bar bulat */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Menambahkan bayangan untuk efek depth */
+    padding: 0 10px;
+    /* Padding horizontal */
 }
 
 .search i {
-    color: #ffffff; /* Warna ikon */
+    color: #ffffff;
+    /* Warna ikon */
 }
 
 .search input {
@@ -53,9 +64,11 @@
     border: none;
     background: transparent;
     font-size: 1.2rem;
-    width: 100%; /* Membuat input memenuhi ruang yang ada */
+    width: 100%;
+    /* Membuat input memenuhi ruang yang ada */
 }
 
 .search input::placeholder {
-    color: #ffffff; /* Warna placeholder */
+    color: #ffffff;
+    /* Warna placeholder */
 }

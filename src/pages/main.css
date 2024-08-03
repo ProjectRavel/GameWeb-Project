@@ -4,6 +4,7 @@
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -22,9 +23,10 @@ main {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    overflow: auto; /* Ubah dari hidden ke auto */
+    overflow: auto;
+    /* Ubah dari hidden ke auto */
     transition: background-color 0.3s ease;
-    
+
 }
 
 /* Style untuk banner */
@@ -35,8 +37,10 @@ main {
     border: 1px solid rgba(0, 0, 0, 0.1);
     background: var(--bgColor);
     transition: width 1s ease;
-    overflow-x: hidden; /* Hanya sembunyikan scroll horizontal */
-    overflow-y: auto; /* Atur scroll vertikal jika diperlukan */
+    overflow-x: hidden;
+    /* Hanya sembunyikan scroll horizontal */
+    overflow-y: auto;
+    /* Atur scroll vertikal jika diperlukan */
 }
 
 .banner.active {
@@ -45,14 +49,17 @@ main {
 
 /* Style untuk section */
 section {
-    overflow: auto; /* Ubah dari hidden ke auto */
+    overflow: auto;
+    /* Ubah dari hidden ke auto */
     position: absolute;
     width: 100%;
     padding: 0 30px;
     opacity: 0;
     height: 0;
-    transform: translateY(20px); /* Initial position for animation */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+    transform: translateY(20px);
+    /* Initial position for animation */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Smooth transition */
 }
 
 /* Section active state */
@@ -61,8 +68,10 @@ section.active {
     height: auto;
     overflow-y: visible;
     opacity: 1;
-    transform: translateY(0); /* Move to original position */
-    animation: scrollUp 0.5s ease-out; /* Apply scrollUp animation */
+    transform: translateY(0);
+    /* Move to original position */
+    animation: scrollUp 0.5s ease-out;
+    /* Apply scrollUp animation */
 }
 
 section::-webkit-scrollbar {
