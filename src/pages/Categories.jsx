@@ -28,16 +28,15 @@ function Categories({ games, reference }) {
       setData(games.filter((game) => game.category === category));
     }
   };
-  
-
 
   const handleSearchGames = (e) => {
     setData(
-      games.filter(game => game.title.toLowerCase().includes(e.target.value.toLowerCase()) )
-    ) 
+      games.filter((game) =>
+        game.title.toLowerCase().includes(e.target.value.toLowerCase())
+      )
+    );
     setText(e.target.value);
   };
-
 
   return (
     <section className="categories" id="categories" ref={reference}>

@@ -1,7 +1,7 @@
 import "./header.css";
 import userImg from "../images/user.jpg";
 
-function Header({toggleActive}) {
+function Header({ toggleActive }) {
   return (
     <header>
       <a href="#" className="menu" onClick={toggleActive}>
@@ -30,6 +30,5 @@ function Header({toggleActive}) {
     </header>
   );
 }
-
 
 export default Header;
