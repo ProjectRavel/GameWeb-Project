@@ -1,12 +1,13 @@
-.gameCard{
+/* Default styles for larger screens */
+.gameCard {
     position: relative;
     padding: 25px 20px;
     margin-bottom: 25px;
-    width: auto;
+    width: 100%; /* Make it full width on larger screens */
     height: 400px;
     border-radius: 20px;
     background: var(--dark);
-    
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
 .gameCard img {
@@ -109,4 +110,99 @@
 
 .gameCard .addBag:hover {
     background: var(--primary);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .gameCard {
+        height: auto; /* Let height adjust automatically */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .gameCard img {
+        height: 40%; /* Adjust image height */
+    }
+
+    .gameCard .gameTitle {
+        font-size: 1.2rem; /* Reduce title font size */
+    }
+
+    .gameCard .gamePrice {
+        flex-direction: column; /* Stack price elements vertically */
+        align-items: flex-start;
+    }
+
+    .gameCard .discount, 
+    .gameCard .prevPrice, 
+    .gameCard .currentPrice {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .gameCard .addBag {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gameCard {
+        padding: 15px; /* Further reduce padding */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .gameCard img {
+        height: 35%; /* Further reduce image height */
+    }
+
+    .gameCard .gameTitle {
+        font-size: 1rem; /* Further reduce title font size */
+    }
+
+    .gameCard .gamePrice {
+        flex-direction: column; /* Stack price elements vertically */
+    }
+
+    .gameCard .discount, 
+    .gameCard .prevPrice, 
+    .gameCard .currentPrice {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .gameCard .addBag {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gameCard {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .gameCard img {
+        height: 30%; /* Further reduce image height */
+    }
+
+    .gameCard .gameTitle {
+        font-size: 0.9rem; /* Reduce title font size */
+    }
+
+    .gameCard .gamePrice {
+        flex-direction: column; /* Stack price elements vertically */
+        align-items: center; /* Center align price elements */
+    }
+
+    .gameCard .discount, 
+    .gameCard .prevPrice, 
+    .gameCard .currentPrice {
+        font-size: 0.8rem; /* Adjust font size */
+    }
+
+    .gameCard .addBag {
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
 }

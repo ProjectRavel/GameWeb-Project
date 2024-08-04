@@ -1,15 +1,14 @@
-
+/* Default styles for larger screens */
 .swiper {
     width: 90%;
-    margin: 0 auto; 
+    margin: 0 auto;
     padding-bottom: 30px;
 }
-
 
 .swiper-slide {
     width: 550px;
     height: 350px;
-    border-radius: 20px; 
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -19,17 +18,16 @@
     height: 100%;
     background-position: center;
     background-size: cover;
-    padding: 20px; 
+    padding: 20px;
     overflow: hidden;
-    border-radius: 20px; 
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
 }
 
 .gameSlider:hover {
-    transform: scale(1.03); 
+    transform: scale(1.03);
 }
-
 
 .gameSlider::after {
     position: absolute;
@@ -39,8 +37,8 @@
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.3);
-    border-radius: 20px; 
-    transition: opacity 0.3s ease-in-out; 
+    border-radius: 20px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 /* Swiper Slide Image */
@@ -58,25 +56,25 @@
     position: absolute;
     bottom: 20px;
     z-index: 1000;
-    width: 100%; /* Adjust to full width */
-    padding: 0 20px;/* Adjust padding for spacing */
+    width: 100%;
+    padding: 0 20px;
     color: #fff;
 }
 
 /* Title styling */
 .gameSlider .content h2 {
-    font-size: 2rem; /* Adjust font size for readability */
+    font-size: 2rem;
     margin-bottom: 10px;
     font-weight: 800;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Add text shadow for contrast */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Description styling */
 .gameSlider .content p {
     color: #ebebeb;
-    font-size: 0.9rem; /* Slightly larger font size */
+    font-size: 0.9rem;
     margin-bottom: 15px;
-    line-height: 1.4; /* Adjust line height for readability */
+    line-height: 1.4;
 }
 
 /* Buttons */
@@ -90,8 +88,8 @@
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
-    border-radius: 5px; /* Rounded corners for buttons */
-    padding: 10px 15px; /* Adjust padding for better button sizing */
+    border-radius: 5px;
+    padding: 10px 15px;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -100,7 +98,7 @@
 }
 
 .gameSlider .content .buttons .orderBtn:hover {
-    background: darken(var(--primary), 10%); /* Darken on hover */
+    background: darken(var(--primary), 10%);
 }
 
 .gameSlider .content .buttons .playBtn {
@@ -112,12 +110,12 @@
     justify-content: center;
     align-items: center;
     font-size: 2.5rem;
-    border: 2px solid #fff; /* Add border for contrast */
+    border: 2px solid #fff;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .playBtn:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Lighten background on hover */
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Video Styling */
@@ -125,10 +123,10 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 100%; /* Full width for better visibility */
-    height: 80%; /* Adjust height */
-    border-radius: 0 20px 0 20px; /* Match border radius */
-    border: none; /* Remove border for clean look */
+    width: 100%;
+    height: 80%;
+    border-radius: 0 20px 0 20px;
+    border: none;
     background: var(--secondary);
     z-index: 1100;
     visibility: hidden;
@@ -141,4 +139,92 @@
     visibility: visible;
     opacity: 1;
     transform: scale(1);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .swiper-slide {
+        width: 100%; /* Make slide full width on smaller screens */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .gameSlider {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .gameSlider .content h2 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .gameSlider .content p {
+        font-size: 0.8rem; /* Adjust font size */
+    }
+
+    .gameSlider .content .buttons a {
+        padding: 8px 12px; /* Adjust button size */
+    }
+
+    .gameSlider .content .buttons .playBtn {
+        height: 40px;
+        width: 40px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 100%; /* Make slide full width */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .gameSlider {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .gameSlider .content h2 {
+        font-size: 1.2rem; /* Adjust font size */
+    }
+
+    .gameSlider .content p {
+        font-size: 0.7rem; /* Adjust font size */
+    }
+
+    .gameSlider .content .buttons a {
+        padding: 6px 10px; /* Adjust button size */
+    }
+
+    .gameSlider .content .buttons .playBtn {
+        height: 35px;
+        width: 35px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-slide {
+        width: 100%; /* Make slide full width */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .gameSlider {
+        padding: 5px; /* Further reduce padding */
+    }
+
+    .gameSlider .content h2 {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .gameSlider .content p {
+        font-size: 0.6rem; /* Adjust font size */
+    }
+
+    .gameSlider .content .buttons a {
+        padding: 4px 8px; /* Adjust button size */
+    }
+
+    .gameSlider .content .buttons .playBtn {
+        height: 30px;
+        width: 30px;
+        font-size: 1.5rem;
+    }
 }
