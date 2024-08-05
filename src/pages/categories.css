@@ -72,3 +72,13 @@
     color: #ffffff;
     /* Warna placeholder */
 }
+
+@media (max-width: 768px) {
+   .filters-and-search {
+    display: block;
+   }
+
+   .filters{
+    margin-bottom: 5%;
+   }
+}

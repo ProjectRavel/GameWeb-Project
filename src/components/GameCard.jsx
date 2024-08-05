@@ -49,7 +49,7 @@ export default function GameCard({ game }) {
           )}
           <span className="currentPrice">${currentPrice.toFixed(2)}</span>
         </div>
-        <a href="#" className="addBag">
+        <a href="#" className="addBag active">
           <i className="bi bi-bag-plus-fill"></i>
         </a>
       </div>

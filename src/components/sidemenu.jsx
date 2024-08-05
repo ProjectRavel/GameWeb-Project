@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./sideMenu.css";
 import NavListItem from "./NavListItem.jsx";
 import { navListData } from "../data/navListData.js";
@@ -8,6 +8,8 @@ import { navSocialData } from "../data/navSocialData.js";
 export default function SideMenu({ active, sectionActive }) {
   const [navData, setNavData] = useState(navListData);
   const [socialData, setSocialData] = useState(navSocialData);
+  const [isSidebarHidden, setSidebarHidden] = useState(false);
+
   const handleNavOnClick = (id, target) => {
     const newNavData = navData.map(nav => {
       nav.active = nav._id === id;
@@ -17,12 +19,12 @@ export default function SideMenu({ active, sectionActive }) {
     sectionActive(target);
   };
 
+  const toggleSidebar = () => {
+    setSidebarHidden(!isSidebarHidden);
+  };
+
   return (
-    <div className={`sideMenu ${active ? 'active' : ''}`}>
-      <a href="#" className="logo">
-        <i className="bi bi-controller"></i>
-        <span className="brand">Play</span>
-      </a>
+    <div className={`sideMenu ${active ? 'active' : ''} ${isSidebarHidden ? 'hidden' : ''}`}>
       <ul className="nav">
         {navData.map((item) => (
           <NavListItem 

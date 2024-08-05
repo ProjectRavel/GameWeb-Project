@@ -4,7 +4,8 @@ import userImg from "../images/user.jpg";
 import { AppContext } from "../App";
 
 function Header({ toggleActive }) {
-  const {library, bag} = useContext(AppContext);
+  const { library, bag } = useContext(AppContext);
+
   return (
     <header>
       <a href="#" className="menu" onClick={toggleActive}>
@@ -15,12 +16,12 @@ function Header({ toggleActive }) {
           <i className="bi bi-heart-fill"></i>
           <span className="like">{library.length}</span>
         </a>
-        <a href="" className="icon">
+        <a href="#" className="icon">
           <i className="bi bi-bag-fill"></i>
-          <span className="bag">0</span>
+          <span className="bag">{bag.length}</span> {/* Pastikan menampilkan jumlah yang benar */}
         </a>
 
-        <div href="#" className="avatar">
+        <div className="avatar">
           <a href="#" className="img">
             <img src={userImg} alt="User Image" />
           </a>

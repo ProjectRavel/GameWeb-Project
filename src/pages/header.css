@@ -1,19 +1,22 @@
+/* Style untuk header */
 header {
-    position: absolute;
+    position: fixed; /* Fix header di atas */
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
-    z-index: 1000 !important;
-    background: transparent;
+    padding: 15px 30px;
+    background: var(--background); /* Ganti dengan warna latar belakang jika diperlukan */
+    z-index: 1000; /* Tetap di atas konten lainnya */
+    box-sizing: border-box; /* Include padding dan border dalam total width/height */
 }
 
 .menu {
     font-size: 1.3rem;
     color: var(--white);
+    text-decoration: none; /* Pastikan tidak ada garis bawah */
 }
 
 .userItems {
@@ -28,18 +31,19 @@ header {
     font-size: 1.5rem;
     width: 50px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 50%; /* Pastikan ikon berbentuk bulat */
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
+    text-decoration: none; /* Pastikan tidak ada garis bawah */
+    background: var(--icon-background); /* Background untuk ikon */
 }
 
 .userItems .icon .like,
 .userItems .icon .bag {
     position: absolute;
     right: 0;
-    bottom: 10px;
+    bottom: 0;
     font-size: 0.8rem;
     font-weight: 800;
     height: 20px;
@@ -54,13 +58,9 @@ header {
 }
 
 .userItems .avatar {
-    width: 150px;
-    height: 50px;
-    padding: 10px 20px;
     display: flex;
     align-items: center;
     gap: 15px;
-    border-radius: 10px;
 }
 
 .userItems .avatar img {
@@ -68,3 +68,32 @@ header {
     height: 35px;
     border-radius: 50%;
 }
+
+/* Media Query untuk perangkat mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .userItems .avatar {
+        gap: 10px;
+    }
+
+    .userItems .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .userItems .icon .like,
+    .userItems .icon .bag {
+        height: 18px;
+        width: 18px;
+    }
+
+    .userItems .avatar img {
+        width: 30px;
+        height: 30px;
+    }
+}
+    

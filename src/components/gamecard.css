@@ -112,6 +112,10 @@
     background: var(--primary);
 }
 
+.gameCard .addBag.active {
+    background: var(--primary);
+}
+
 /* Responsive styles */
 @media (max-width: 1200px) {
     .gameCard {
