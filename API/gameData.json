@@ -11,7 +11,7 @@
     "price": 79.0,
     "img": "./assets/games/lol-bg.jpeg",
     "trailer": "https://www.youtube.com/embed/vzHrjOMfHPY",
-    "active": true
+    "active": false
   },
   {
     "_id": 2,
@@ -115,7 +115,7 @@
     "price": 69.99,
     "img": "./assets/games/zelda-breath-of-the-wild.jpeg",
     "trailer": "https://www.youtube.com/embed/zw47_q9wbBE",
-    "active": true
+    "active": false
   },
   {
     "_id": 10,
@@ -128,6 +128,6 @@
     "price": 89.99,
     "img": "./assets/games/cyberpunk-2077-bg.jpeg",
     "trailer": "https://www.youtube.com/watch?v=8X2kIfS6fb8",
-    "active": true
+    "active": false
   }
 ]

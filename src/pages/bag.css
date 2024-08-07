@@ -1,0 +1,56 @@
+/* Style untuk Bag */
+.bag {
+    padding: 20px;
+    background: var(--secondary); /* Latar belakang bagian bag */
+    color: var(--white); /* Warna teks */
+    min-height: 100vh; /* Menjamin bagian ini menutupi seluruh tinggi layar */
+}
+
+.bag h1 {
+    font-size: 2em;
+    color: var(--white); /* Warna judul */
+    margin-bottom: 20px;
+}
+
+.bag h2 {
+    font-size: 1.5em;
+    color: var(--third); /* Warna untuk teks ketika bag kosong */
+    text-align: center;
+    margin-top: 50px;
+}
+
+.table-responsive {
+    overflow-x: auto; /* Membuat tabel bisa digulir secara horizontal di perangkat kecil */
+}
+
+.shoppingTable {
+    width: 100%; /* Memastikan tabel mengambil seluruh lebar kontainer */
+    color: var(--white); /* Warna teks dalam tabel */
+}
+
+.shoppingTable th {
+    background: var(--primary); /* Latar belakang header tabel */
+    color: var(--white); /* Warna teks header tabel */
+    text-align: center;
+}
+
+.shoppingTable td {
+    text-align: center; /* Rata tengah teks dalam tabel */
+}
+
+/* Menambahkan border untuk tabel */
+.shoppingTable th,
+.shoppingTable td {
+    border-bottom: 1px solid var(--primary); /* Garis bawah untuk pemisah tabel */
+}
+
+@media (max-width: 768px) {
+    .shoppingTable th,
+    .shoppingTable td {
+        font-size: 0.9rem; /* Ukuran font untuk tampilan mobile */
+    }
+
+    .bag h1 {
+        font-size: 1.5em; /* Ukuran font untuk judul di perangkat kecil */
+    }
+}

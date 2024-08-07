@@ -1,0 +1,47 @@
+/* Style untuk ShopBagItem */
+.shopBagItem {
+  background: var(--secondary); /* Warna latar belakang item */
+  color: var(--white); /* Warna teks */
+  border-bottom: 1px solid var(--primary); /* Garis bawah untuk pemisah item */
+}
+
+.shopBagItem img {
+  width: 50px; /* Ukuran gambar */
+  height: 50px; /* Ukuran gambar */
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+  border-radius: 5px; /* Sudut gambar membulat */
+}
+
+.shopBagItem th,
+.shopBagItem td {
+  padding: 10px; /* Jarak dalam sel */
+  text-align: center; /* Rata tengah teks */
+  background-color: var(--secondary);
+  color: white; /*
+}
+
+.shopBagItem th {
+  background: var(--primary); /* Latar belakang header tabel */
+  color: var(--white); /* Warna teks header tabel */
+  font-weight: bold; /* Teks header tabel tebal */
+}
+
+.shopBagItem a {
+  color: var(--primary); /* Warna ikon hapus */
+  text-decoration: none; /* Menghapus garis bawah */
+  display: flex;
+  justify-content: center; /* Menyusun ikon di tengah sel */
+  align-items: center;
+  background-color: var(--secondary);
+  justify-content: center; /* Menyusun ikon di tengah sel */
+  align-items: center;
+  font-size: 1.2rem; /* Ukuran ikon */
+}
+
+.shopBagItem a:hover {
+  color: var(--third); /* Warna ikon hapus saat hover */
+}
+
+.shopBagItem td:last-child a {
+  color: var(--third); /* Warna ikon hapus di kolom terakhir */
+}

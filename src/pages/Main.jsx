@@ -66,7 +66,6 @@ function Main() {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log(games);
 
   return (
     <main>

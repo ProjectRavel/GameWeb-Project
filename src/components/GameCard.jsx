@@ -10,13 +10,14 @@ export default function GameCard({ game }) {
 
   };
 
+  const handleAddToBag = (game) => {
+    if (bag.includes(game)) return;
+    setBag([...bag, game]);
+  }
+
   const handleRemoveFromLibrary = (game) => {
     setLibrary(library.filter((item) => item._id !== game._id));
   };
-
-  useEffect(() => {
-    console.log(library);
-  }, [library]);
 
   const currentPrice = (1 - game.discount) * game.price;
   return (
@@ -26,7 +27,7 @@ export default function GameCard({ game }) {
         <a
           href="#"
           className={`like ${library.includes(game) ? "active" : ""}`}
-          onClick={ 
+          onClick={
             library.includes(game)
               ? () => handleRemoveFromLibrary(game)
               : () => handleAddToLibrary(game)
@@ -50,7 +51,7 @@ export default function GameCard({ game }) {
           <span className="currentPrice">${currentPrice.toFixed(2)}</span>
         </div>
         <a href="#" className="addBag active">
-          <i className="bi bi-bag-plus-fill"></i>
+          <i className="bi bi-bag-plus-fill" onClick={() => handleAddToBag(game)}></i>
         </a>
       </div>
     </div>
